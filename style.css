@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --background-blue: hsl(217, 54%, 11%);
+    --card-background: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%)
+}
+
+html {
+    font-family: 'Outfit', sans-serif;
+    color: var(--soft-blue);
+}
+
+
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.attribution {
+    margin-top: 64px;
+}
+
+.card {
+    width: 320px;
+    background-color: var(--card-background);
+    padding: 18px;
+    border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 80%;
+    }
+}
+
+.img-wrapper {
+    position: relative;
+}
+
+.img-wrapper img {
+    width: 100%;
+    border-radius: 4px;
+    
+}
+
+.img-wrapper:hover .view-wrapper{
+    cursor: pointer;
+    display: block;
+}
+
+.view-icon {
+    position: absolute;
+
+    top: 50%;
+    bottom: 50%;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.view-wrapper {
+    display: none;
+    position: absolute;
+    background-color: var(--cyan);
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    opacity: 0.6;
+}
+
+.heading {
+    padding-top: 16px;   
+
+}
+
+.heading:hover, .heading:hover span {
+    color: var(--cyan);
+    cursor: pointer;
+
+}
+
+.heading span {
+    color: var(--white);
+}
+
+.content-desc {
+    padding-top: 16px;
+}
+
+.price-wrapper {
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.price-wrapper::after {
+    content: '';
+    display: block;
+    border: 1px solid var(--line);
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -24px;
+}
+
+.price {
+    display: flex;
+}
+
+.price-desc {
+    color: var(--cyan);
+    padding-left: 6px;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+}
+
+.time-desc {
+    padding-left: 8px;
+}
+
+.footer {
+    margin-top: 40px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.creator-img {
+    width: 10%;
+    margin-right: 16px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+.creator-desc span {
+    color: var(--white);
+}
+
+.creator-desc span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+
+
+
